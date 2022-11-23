@@ -23,7 +23,7 @@ F_out = reshape(Out(:),m*n,3);
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-F_out = ganma(F_out);
+F_out = inv_gamma_srgb(F_out);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 F_out_hold=reshape(F_out,m,n,3);
 xyz_out=rgb2xyz_2(F_out);
@@ -129,7 +129,7 @@ XYZ_out = reshape(XYZ(:),m*n,3);
 RGB_correct=xyz2rgb_2(XYZ_out);
 RGB_correct_hold=reshape(RGB_correct(:),m,n,3);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-RGB_correct=inv_ganma(RGB_correct);
+RGB_correct=gamma_srgb(RGB_correct);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 RGB_correct=reshape(RGB_correct(:),m,n,3);
 figure; imshow(RGB_correct,'Border','tight');

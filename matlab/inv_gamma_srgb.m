@@ -1,5 +1,5 @@
-%gamma correction
-function rgb2 = ganma(rgb)
+%inverse gamma correction
+function rgb2 = inv_gamma_srgb(rgb)
 
 [m,n] = size(rgb);
 
