@@ -69,7 +69,7 @@ XYZ_out = reshape(XYZ(:),m*n,3);
 RGB_out=xyz2rgb_2(XYZ_out);
 RGB_out_hold=reshape(RGB_out(:),m,n,3);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-RGB_out=inv_gamma_srgb(RGB_out);
+RGB_out=gamma_srgb(RGB_out);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 RGB_out=reshape(RGB_out(:),m,n,3);
 figure; imshow(RGB_out,'Border','tight');
